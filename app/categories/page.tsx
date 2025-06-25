@@ -23,7 +23,17 @@ import { MapPin, Star } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { Suspense } from "react";
+
 export default function Categories() {
+  return (
+    <Suspense>
+      <CategoriesWOSuspense />
+    </Suspense>
+  );
+}
+
+function CategoriesWOSuspense() {
   const searchParams = useSearchParams();
   const [location, setLocation] = useState<string | undefined>(
     searchParams.get("location") || undefined
