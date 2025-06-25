@@ -21,7 +21,7 @@ import { Badge } from "@/components/ui/badge";
 import { artistData } from "../data/artistData";
 import { MapPin, Star } from "lucide-react";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation";
 export default function Categories() {
   const searchParams = useSearchParams();
