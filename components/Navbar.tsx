@@ -1,6 +1,6 @@
 import { Caveat } from "next/font/google";
 import { Button } from "./ui/button";
-
+import Link from "next/link";
 const caveat = Caveat({
   subsets: ["latin"],
 });
@@ -10,18 +10,24 @@ export const Navbar = () => {
       <h1
         className={`${caveat.className} font-bold text-[24px] flex items-center`}
       >
-        Artistly
+        <Link href={"/"}>Artistly</Link>
       </h1>
       <div className="flex justify-center items-center  gap-[16px] text-[14px]">
-        <Button variant={"link"} className="w-fit h-fit">
-          Categories
-        </Button>
-        <Button variant={"link"} className="w-fit h-fit">
-          Discover Artists
-        </Button>
-        <Button variant={"link"} className="w-fit h-fit">
-          Find Gigs
-        </Button>
+        <Link href={"/categories"}>
+          <Button variant={"link"} className="w-fit h-fit">
+            Categories
+          </Button>
+        </Link>
+        <Link href={"/categories"}>
+          <Button variant={"link"} className="w-fit h-fit">
+            Discover Artists
+          </Button>
+        </Link>
+        <Link href={"/onboard"}>
+          <Button variant={"link"} className="w-fit h-fit">
+            Find Gigs
+          </Button>
+        </Link>
       </div>
       <div className="flex justify-end gap-[18px]  items-center ">
         <Button variant="outline-artist">Bookings</Button>

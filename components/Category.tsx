@@ -9,6 +9,7 @@ import {
 
 import CategoryPageData from "@/app/data/categoryPageData";
 import { Button } from "./ui/button";
+import { Link } from "lucide-react";
 export const Category = () => {
   return (
     <main className="px-[36px] py-[20px] flex flex-col gap-[36px]">
@@ -52,7 +53,9 @@ export const Category = () => {
                 <p>{category.subtitle}</p>
                 <div className="w-fit">
                   {" "}
-                  <Button variant={"artist"}>Explore</Button>
+                  <Link href="/categories">
+                    <Button variant={"artist"}>Explore</Button>
+                  </Link>
                 </div>
               </div>
             </div>

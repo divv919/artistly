@@ -1,5 +1,5 @@
 import { Button } from "./ui/button";
-
+import Link from "next/link";
 export const Hero = () => {
   return (
     <main className="flex  justify-center   px-[36px] py-[40px] ">
@@ -20,8 +20,12 @@ export const Hero = () => {
             admirer or an artist, find your next masterpiece or make one.
           </div>
           <div className="flex justify-center gap-[24px]">
-            <Button variant={"outline-artist"}>Join Now</Button>
-            <Button variant={"artist"}>Discover Artists</Button>
+            <Link href={"/onboard"}>
+              <Button variant={"outline-artist"}>Join Now</Button>
+            </Link>
+            <Link href={"/categories"}>
+              <Button variant={"artist"}>Discover Artists</Button>
+            </Link>
           </div>
         </div>
       </div>
